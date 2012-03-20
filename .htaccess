@@ -1,7 +1,10 @@
+# example from 
+# http://www.logon2.com.au/blog/archive/web-design/php-apache-mod-rewrite-tutorial/
+
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /blog
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /blog/index.php [L]
+	RewriteEngine On
+	RewriteBase /blog
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /blog/index.php [L]
 </IfModule>

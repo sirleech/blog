@@ -1,5 +1,6 @@
 <html>
 <head><title>Chris' Blog</title></head>
+<link rel="stylesheet" type="text/css" href="/blog/blog.css" />
 <body>
 
 <?php
