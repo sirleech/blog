@@ -12,11 +12,13 @@ $count = count($array);
 
 $urlVariables = explode("/",$_SERVER['REQUEST_URI']);
 
-//var_dump($urlVariables);
 
 
 $date = $urlVariables[2];
 $article = $urlVariables[3];
+
+// include articles from /articles/
+// in format "20120131-article-name.html" for an article dated Jan 31, 2012
 
 if(!empty($article))
 	include("articles/" . $date . "-" .$article . ".html");
@@ -34,7 +36,7 @@ for ($i = 2; $i < $count; $i++) {
 	//$date = new DateTime($dateStr);
 	//$dateFormat = echo date("Y/m/d",$dateStr);
 		
-	echo "<a href='https://ausbots.com.au/blog/$dateStr/$article'> $article</a> <br/>";
+	echo "<a href='/blog/$dateStr/$article'> $article</a> <br/>";
 	echo "</li>";
 }
 
